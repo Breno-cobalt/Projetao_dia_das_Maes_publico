@@ -1,12 +1,20 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 
+
 <title>Dia das Mães</title>
+
 
 <style>
     
+
+
 
 @font-face {
     font-family: 'QuickLove';
@@ -112,6 +120,7 @@ body {
     }
 }
 
+
 </style>
 </head>
 
@@ -119,14 +128,18 @@ body {
 
 <body>
 
+
 <div id="contador"></div>
+
 <div class="emojis"></div>
 
 <div class="container">
     <div id="conteudo"></div>
 </div>
 
+
 <script>
+
 
 const telas = [
     { tipo: "inicio", texto: "Mãe, para mim significa..." },
@@ -160,9 +173,14 @@ const telas = [
     { nome: "Giovana", frase:"proteção e cuidado."},
     { nome: "Kaleo", frase:"Proteção, amor, carinho, segurança, responsabilidade..."},
     { nome: "Diana", frase:"Mãe é como se fosse Deus..."},
+    { nome: "Leonardo Gomes Dias", frase: "É uma pessoa escolhida por Deus para dar a luz a você na terra."},
+    { nome: "Monize", frase: "Tudo, razão da minha vida."},
+
 ];
 
+
 let index = 0;
+
 
 function mostrarTelaAnimado() {
     const conteudo = document.getElementById("conteudo");
@@ -181,6 +199,7 @@ function mostrarTelaAnimado() {
         conteudo.classList.remove("saindo");
     }, 400);
 
+
     const contador = document.getElementById("contador");
     let total = telas.length - 1;
     
@@ -193,6 +212,7 @@ function mostrarTelaAnimado() {
     
 }
 
+
 mostrarTelaAnimado();
 
 document.addEventListener("keydown", function(e) {
@@ -203,7 +223,9 @@ document.addEventListener("keydown", function(e) {
     }
 });
 
+
 const emojisLista = ["💖", "🍼", "💗", "🌸", "💕"];
+
 
 function criarEmoji() {
     const emoji = document.createElement("div");
@@ -227,6 +249,7 @@ for (let i = 0; i < 20; i++) {
 }
 
 setInterval(criarEmoji, 600);
+
 
 </script>
 
