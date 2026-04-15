@@ -41,3 +41,38 @@ document.addEventListener("keydown", function(e) {
     }
 
 });
+
+let tocando = false;
+
+function toggleMusica() {
+    const musica = document.getElementById("musica");
+
+    if (tocando) {
+        musica.pause();
+    } else {
+        musica.play();
+    }
+
+    tocando = !tocando;
+}
+
+const cores = [
+    "linear-gradient(to right, #ff9a9e, #fad0c4)",
+    "linear-gradient(to right, #a18cd1, #fbc2eb)",
+    "linear-gradient(to right, #84fab0, #8fd3f4)",
+    "linear-gradient(to right, #fccb90, #d57eeb)"
+];
+
+let corAtual = 0;
+
+function mudarCor() {
+    corAtual++;
+    if (corAtual >= cores.length) corAtual = 0;
+
+    document.body.style.background = cores[corAtual];
+}
+
+function voltarInicio() {
+    index = 0;
+    mostrarTelaAnimado();
+}

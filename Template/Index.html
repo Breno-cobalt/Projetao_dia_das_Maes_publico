@@ -120,16 +120,14 @@ body {
     }
 }
 
-
 </style>
 </head>
-
 
 
 <body>
 
 
-<div id="contador"></div>
+
 
 <div class="emojis"></div>
 
@@ -255,4 +253,20 @@ setInterval(criarEmoji, 600);
 
 
 </body>
+
+<footer class="footer">
+
+<audio id="musica" loop>
+    <source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+    <div id="contador"></div>
+
+    <div class="toolbar">
+        <button onclick="toggleMusica()">🎵</button>
+        <button onclick="mudarCor()">🎨</button>
+        <button onclick="voltarInicio()">🔄</button>
+    </div>
+    
+</footer>
 </html>

@@ -84,9 +84,47 @@
     bottom: 20px;      /* distância do rodapé */
     left: 20px;        /* distância da lateral esquerda */
     font-size: 14px;
-    opacity: 0.8;      /* translúcido */
+    font-size: 14px;
+    opacity: 0.5;
     font-family: Arial, sans-serif;
     letter-spacing: 1px;
     pointer-events: none; /* não interfere em clique ou teclado */
     z-index: 1000;
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    pointer-events: none; /* evita interferir na tela */
+    z-index: 1000;
+}
+
+.toolbar {
+    display: flex;
+    gap: 10px;
+    pointer-events: auto; /* permite clicar nos botões */
+}
+
+.toolbar button {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+
+.toolbar button:hover {
+    background: rgba(255,255,255,0.4);
 }
