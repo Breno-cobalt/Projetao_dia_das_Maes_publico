@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dia das M&atilde;es</title>
-    <link rel="stylesheet" href="../Static/Style.css">
-    <script src="../Static/script.js" defer></script>
+    <link rel="stylesheet" href="../Static/Style.css?v=6">
+    <script src="../Static/script.js?v=6" defer></script>
 </head>
 <body>
     <div class="background" aria-hidden="true">
@@ -24,31 +24,50 @@
                 <div class="progress-track" aria-hidden="true">
                     <span id="progressBar"></span>
                 </div>
+                <div class="dot-strip" id="dotStrip" aria-label="Escolher mensagem"></div>
+                <p class="status-message" id="statusMessage" role="status" aria-live="polite"></p>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <button class="nav-button" id="prevButton" type="button" aria-label="Mensagem anterior" title="Mensagem anterior">
-            &lsaquo;
+        <button class="control-button nav-button" id="prevButton" type="button" aria-label="Mensagem anterior" title="Mensagem anterior">
+            <span class="button-icon" aria-hidden="true">&lsaquo;</span>
+            <span class="button-label">Voltar</span>
         </button>
-        <button class="nav-button primary" id="nextButton" type="button" aria-label="Pr&oacute;xima mensagem" title="Pr&oacute;xima mensagem">
-            &rsaquo;
+        <button class="control-button nav-button primary" id="nextButton" type="button" aria-label="Pr&oacute;xima mensagem" title="Pr&oacute;xima mensagem">
+            <span class="button-icon" aria-hidden="true">&rsaquo;</span>
+            <span class="button-label">Avan&ccedil;ar</span>
         </button>
-        <button class="tool-button" id="musicButton" type="button" aria-label="Tocar m&uacute;sica" title="Tocar m&uacute;sica">
-            &#9835;
+        <button class="control-button tool-button" id="autoButton" type="button" aria-label="Iniciar apresenta&ccedil;&atilde;o" title="Iniciar apresenta&ccedil;&atilde;o">
+            <span class="button-icon" aria-hidden="true">&#9654;</span>
+            <span class="button-label">Auto</span>
         </button>
-        <button class="tool-button" id="themeButton" type="button" aria-label="Trocar tema" title="Trocar tema">
-            &#9680;
+        <button class="control-button tool-button" id="musicButton" type="button" aria-label="Tocar m&uacute;sica" title="Tocar m&uacute;sica">
+            <span class="button-icon" aria-hidden="true">&#9835;</span>
+            <span class="button-label">M&uacute;sica</span>
         </button>
-        <button class="tool-button" id="homeButton" type="button" aria-label="Voltar ao in&iacute;cio" title="Voltar ao in&iacute;cio">
-            &#8634;
+        <button class="control-button tool-button" id="themeButton" type="button" aria-label="Trocar tema" title="Trocar tema">
+            <span class="button-icon" aria-hidden="true">&#9680;</span>
+            <span class="button-label">Tema</span>
+        </button>
+        <button class="control-button tool-button" id="shareButton" type="button" aria-label="Compartilhar mensagem" title="Compartilhar mensagem">
+            <span class="button-icon" aria-hidden="true">&#10548;</span>
+            <span class="button-label">Enviar</span>
+        </button>
+        <button class="control-button tool-button" id="downloadButton" type="button" aria-label="Baixar cart&atilde;o" title="Baixar cart&atilde;o">
+            <span class="button-icon" aria-hidden="true">&#8681;</span>
+            <span class="button-label">Cart&atilde;o</span>
+        </button>
+        <button class="control-button tool-button" id="homeButton" type="button" aria-label="Voltar ao in&iacute;cio" title="Voltar ao in&iacute;cio">
+            <span class="button-icon" aria-hidden="true">&#8634;</span>
+            <span class="button-label">In&iacute;cio</span>
         </button>
     </footer>
 
     <audio id="musica" preload="auto" loop>
+        <source src="../Static/musica.wav" type="audio/wav">
         <source src="../Static/musica.mp3" type="audio/mpeg">
-        <source src="../musica.mp3" type="audio/mpeg">
     </audio>
 </body>
 </html>
